@@ -1,0 +1,65 @@
+.football {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.field {
+  width: 100%;
+  border-radius: 10px;
+}
+.ball {
+  position: absolute;
+  top: 43%;
+  left: 46.1%;
+  width: 100px;
+  height: 100px;
+}
+.tab {
+  position: absolute;
+  top: 5px;
+  left: 46.1%;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(238, 238, 238, 0.4);
+  font-size: 45px;
+  text-align: center;
+  color: black;
+}
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.blueSmall {
+  color: blue;
+  font-size: 32px;
+}
+.redSmall {
+  color: red;
+  font-size: 32px;
+}
+.blueRectangle,
+.redRectangle {
+  position: absolute;
+  width: 450px;
+  height: 267px;
+  line-height: 250px;
+  top: 32%;
+  left: 33%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(49, 116, 240, 0.4);
+  font-size: 140px;
+  text-align: center;
+  color: blue;
+  z-index: 99;
+  display: none;
+}
+.redRectangle {
+  color: red;
+  background-color: rgba(236, 15, 15, 0.4);
+}
