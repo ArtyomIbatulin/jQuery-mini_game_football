@@ -1,10 +1,10 @@
-const noise = new Audio("sounds/noise.mp3"),
-  goal = new Audio("sounds/goal.mp3");
+const noise = new Audio("sounds/noise.mp3");
+const goal = new Audio("sounds/goal.mp3");
 goal.volume = 0.5;
 
-let blueScore = 0,
-  redScore = 0,
-  redBegin = 0;
+let blueScore = 0;
+let redScore = 0;
+let redBegin = 0;
 
 const viewScore = () => {
   if (blueScore > 9 || redScore > 9) {
@@ -40,23 +40,23 @@ const shot = () => {
   $(".ball").animate(
     {
       left: ballX,
-      top: ballY
+      top: ballY,
     },
     500,
-    function() {
+    function () {
       (position = $(".ball").position()), console.log(position);
 
       if (position.top >= 233 && position.top <= 423 && position.left == 0) {
         goal.play();
         $(".redRectangle").show();
-        setTimeout(function() {
+        setTimeout(function () {
           $(".redRectangle").hide();
         }, 3000);
         redScore++;
         console.log(blueScore + " : " + redScore);
         $(".ball").css({
           top: "43%",
-          left: "46.1%"
+          left: "46.1%",
         });
       }
 
@@ -67,13 +67,13 @@ const shot = () => {
       ) {
         goal.play();
         $(".blueRectangle").show();
-        setTimeout(function() {
+        setTimeout(function () {
           $(".blueRectangle").hide();
         }, 3000);
         blueScore++;
         $(".ball").css({
           top: "43%",
-          left: "46.1%"
+          left: "46.1%",
         });
         redBegin = 1;
       }
